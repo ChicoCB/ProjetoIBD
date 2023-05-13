@@ -9,6 +9,30 @@ insert into products values (8,'Toys','Lego','LEGO Star Wars Millennium Falcon',
 insert into products values (9,'Electronics','Headphones','Bose QuietComfort 35 II Wireless Headphones','10', 235.0, 17.0, 18.0, 8.1, true, 3, null, null, null, 'https://www.bose.com/en_us/products/headphones/over_ear_headphones/quietcomfort-35-wireless-ii.html');
 insert into products values (10,'Home','Bedding','Brooklinen Luxe Core Sheet Set','10', 2400.0, 90.0, 102.0, 1.0, false, 5, null, null, null, 'https://www.brooklinen.com/products/luxe-core-sheet-set');
 
+insert into clients values (1, 'John Doe', 'John', 'Doe', 32, '1990-01-15', '12345678901', null, 'john.doe@example.com', '+1 (555) 555-1234', 'Visa', '1234 5678 9012 3456', '12/23', '123');
+insert into clients values (2, 'Jane Smith', 'Jane', 'Smith', 25, '1998-06-02', '23456789012', null, 'jane.smith@example.com', '+1 (555) 555-5678', 'Mastercard', '2345 6789 0123 4567', '03/24', '456');
+insert into clients values (3, 'Bob Johnson', 'Bob', 'Johnson', 40, '1983-09-20', '34567890123', null, 'bob.johnson@example.com', '+1 (555) 555-9012', 'American Express', '3456 789012 34567', '06/25', '789');
+insert into clients values (4, 'Alice Lee', 'Alice', 'Lee', 19, '2004-03-10', '45678901234', null, 'alice.lee@example.com', '+1 (555) 555-3456', 'Visa', '4567 8901 2345 6789', '09/26', '012');
+insert into clients values (5, 'Tom Jackson', 'Tom', 'Jackson', 55, '1968-12-25', '56789012345', null, 'tom.jackson@example.com', '+1 (555) 555-6789', 'Mastercard', '5678 9012 3456 7890', '12/27', '345');
+
+insert into adresses values (1, 'USA', 'New York', 'New York City', '10001', 'Broadway', '123', true);
+insert into adresses values (2, 'USA', 'New York', 'Brooklyn', '11201', 'Bedford Ave', '456', false);
+insert into adresses values (3, 'USA', 'California', 'Los Angeles', '90001', 'Hollywood Blvd', '789', true);
+insert into adresses values (4, 'USA', 'Texas', 'Austin', '78701', 'Congress Ave', '1011', true);
+insert into adresses values (5, 'Brazil', 'São Paulo', 'São Paulo', '01234-567', 'Avenida Paulista', '1234', true);
+insert into adresses values (6, 'Canada', 'Quebec', 'Montreal', 'H2Y 1T2', 'Rue Sainte-Catherine', '567', true);
+
+insert into sales values (1, 'Credit Card', '2023-05-10', '12am - 5pm', null, '2023-05-15', 'Processing');
+insert into sales values (2, 'PayPal', '2023-05-10', '8am - 12am', null, '2023-05-15', 'Processing');
+insert into sales values (3, 'Credit Card', '2023-05-11', '5pm - 9pm', null, '2023-05-16', 'Processing');
+insert into sales values (4, 'Credit Card', '2023-05-12', '9pm - 12pm', null, '2023-05-17', 'Processing');
+insert into sales values (5, 'PayPal', '2023-05-12', '8am - 12am', null, '2023-05-17', 'Processing');
+insert into sales values (6, 'Credit Card', '2023-05-13', '12am - 5pm', null, '2023-05-18', 'Processing');
+insert into sales values (7, 'PayPal', '2023-05-13', '8am - 12am', null, '2023-05-18', 'Processing');
+insert into sales values (8, 'Credit Card', '2023-05-14', '5pm - 9pm', null, '2023-05-19', 'Processing');
+insert into sales values (9, 'Credit Card', '2023-05-15', '9pm - 12pm', null, '2023-05-20', 'Processing');
+insert into sales values (10, 'PayPal', '2023-05-15', '8am - 12am', null, '2023-05-20', 'Processing');
+
 insert into product_prices values (1, '$799.99', '2022-01-01', '2022-02-01');
 insert into product_prices values (1, '$699.99', '2022-02-02', '2022-03-01');
 insert into product_prices values (2, '$129.99', '2022-05-01', '2022-06-01');
@@ -40,30 +64,34 @@ insert into product_prices values (8, '$179.99', '2022-04-02', '9999-12-31');
 insert into product_prices values (9, '$279.99', '2022-03-02', '9999-12-31');
 insert into product_prices values (10, '$129.99', '2022-07-02', '9999-12-31');
 
-insert into clients values (1, 'John Doe', 'John', 'Doe', 32, '1990-01-15', '12345678901', null, 'john.doe@example.com', '+1 (555) 555-1234', 'Visa', '1234 5678 9012 3456', '12/23', '123');
-insert into clients values (2, 'Jane Smith', 'Jane', 'Smith', 25, '1998-06-02', '23456789012', null, 'jane.smith@example.com', '+1 (555) 555-5678', 'Mastercard', '2345 6789 0123 4567', '03/24', '456');
-insert into clients values (3, 'Bob Johnson', 'Bob', 'Johnson', 40, '1983-09-20', '34567890123', null, 'bob.johnson@example.com', '+1 (555) 555-9012', 'American Express', '3456 789012 34567', '06/25', '789');
-insert into clients values (4, 'Alice Lee', 'Alice', 'Lee', 19, '2004-03-10', '45678901234', null, 'alice.lee@example.com', '+1 (555) 555-3456', 'Visa', '4567 8901 2345 6789', '09/26', '012');
-insert into clients values (5, 'Tom Jackson', 'Tom', 'Jackson', 55, '1968-12-25', '56789012345', null, 'tom.jackson@example.com', '+1 (555) 555-6789', 'Mastercard', '5678 9012 3456 7890', '12/27', '345');
+insert into clients_adresses values (1, 1);
+insert into clients_adresses values (1, 2);
+insert into clients_adresses values (2, 3);
+insert into clients_adresses values (3, 4);
+insert into clients_adresses values (4, 5);
+insert into clients_adresses values (5, 6);
 
-insert into client_adresses values (1, 1, 'USA', 'New York', 'New York City', '10001', 'Broadway', '123', true);
-insert into client_adresses values (2, 1, 'USA', 'New York', 'Brooklyn', '11201', 'Bedford Ave', '456', false);
-insert into client_adresses values (3, 2, 'USA', 'California', 'Los Angeles', '90001', 'Hollywood Blvd', '789', true);
-insert into client_adresses values (4, 3, 'USA', 'Texas', 'Austin', '78701', 'Congress Ave', '1011', true);
-insert into client_adresses values (5, 4, 'Brazil', 'São Paulo', 'São Paulo', '01234-567', 'Avenida Paulista', '1234', true);
-insert into client_adresses values (6, 5, 'Canada', 'Quebec', 'Montreal', 'H2Y 1T2', 'Rue Sainte-Catherine', '567', true);
+insert into sales_adresses values ('1','1');
+insert into sales_adresses values ('2','1');
+insert into sales_adresses values ('3','2');
+insert into sales_adresses values ('4','2');
+insert into sales_adresses values ('5','3');
+insert into sales_adresses values ('6','4');
+insert into sales_adresses values ('7','5');
+insert into sales_adresses values ('8','6');
+insert into sales_adresses values ('9','6');
+insert into sales_adresses values ('10','3');
 
-insert into sales values (1, 1, 'Credit Card', 1, '2023-05-10', '12am - 5pm', null, '2023-05-15', 'Processing');
-insert into sales values (2, 2, 'PayPal', 3, '2023-05-10', '8am - 12am', null, '2023-05-15', 'Processing');
-insert into sales values (3, 3, 'Credit Card', 4, '2023-05-11', '5pm - 9pm', null, '2023-05-16', 'Processing');
-insert into sales values (4, 4, 'Credit Card', 5, '2023-05-12', '9pm - 12pm', null, '2023-05-17', 'Processing');
-insert into sales values (5, 5, 'PayPal', 6, '2023-05-12', '8am - 12am', null, '2023-05-17', 'Processing');
-insert into sales values (6, 2, 'Credit Card', 3, '2023-05-13', '12am - 5pm', null, '2023-05-18', 'Processing');
-insert into sales values (7, 1, 'PayPal', 1, '2023-05-13', '8am - 12am', null, '2023-05-18', 'Processing');
-insert into sales values (8, 1, 'Credit Card', 2, '2023-05-14', '5pm - 9pm', null, '2023-05-19', 'Processing');
-insert into sales values (9, 3, 'Credit Card', 2, '2023-05-15', '9pm - 12pm', null, '2023-05-20', 'Processing');
-insert into sales values (10, 4, 'PayPal', 3, '2023-05-15', '8am - 12am', null, '2023-05-20', 'Processing');
-
+insert into sales_clients values ('1','1');
+insert into sales_clients values ('2','2');
+insert into sales_clients values ('3','3');
+insert into sales_clients values ('4','4');
+insert into sales_clients values ('5','5');
+insert into sales_clients values ('6','1');
+insert into sales_clients values ('7','1');
+insert into sales_clients values ('8','2');
+insert into sales_clients values ('9','3');
+insert into sales_clients values ('10','4');
 
 insert into sales_products values (1, 1, 2, 0.1);
 insert into sales_products values (1, 3, 1, 0);
@@ -85,5 +113,3 @@ insert into sales_products values (9, 2, 2, 0.1);
 insert into sales_products values (10, 3, 1, 0);
 insert into sales_products values (10, 5, 1, 0);
 insert into sales_products values (10, 7, 1, 0.05);
-
-
