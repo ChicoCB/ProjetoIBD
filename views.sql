@@ -12,7 +12,9 @@ CREATE VIEW clients_per_city AS
     FROM
         clients
             JOIN
-        client_adresses USING (client_id)
+        clients_adresses USING (client_id)
+            JOIN
+        adresses USING (adress_id)
     WHERE
         is_home_adress = TRUE
     GROUP BY city
@@ -25,7 +27,9 @@ CREATE VIEW clients_per_state AS
     FROM
         clients
             JOIN
-        client_adresses USING (client_id)
+        clients_adresses USING (client_id)
+            JOIN
+        adresses USING (adress_id)
     WHERE
         is_home_adress = TRUE
     GROUP BY state
@@ -38,7 +42,9 @@ CREATE VIEW clients_per_country AS
     FROM
         clients
             JOIN
-        client_adresses USING (client_id)
+        clients_adresses USING (client_id)
+            JOIN
+        adresses USING (adress_id)
     WHERE
         is_home_adress = TRUE
     GROUP BY country
@@ -51,9 +57,9 @@ CREATE VIEW sales_per_city AS
     FROM
         sales
             JOIN
-        clients USING (client_id)
+        sales_adresses USING (sale_id)
             JOIN
-        client_adresses USING (client_id)
+        adresses USING (adress_id)
     GROUP BY city
     ORDER BY number_of_sales DESC);
 
@@ -64,9 +70,9 @@ CREATE VIEW sales_per_state AS
     FROM
         sales
             JOIN
-        clients USING (client_id)
+        sales_adresses USING (sale_id)
             JOIN
-        client_adresses USING (client_id)
+        adresses USING (adress_id)
     GROUP BY state
     ORDER BY number_of_sales DESC);
 
@@ -77,8 +83,8 @@ CREATE VIEW sales_per_country AS
     FROM
         sales
             JOIN
-        clients USING (client_id)
+        sales_adresses USING (sale_id)
             JOIN
-        client_adresses USING (client_id)
+        adresses USING (adress_id)
     GROUP BY country
     ORDER BY number_of_sales DESC);
