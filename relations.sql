@@ -1,13 +1,13 @@
-insert into products values (1,'Electronics','Smartphone','Samsung Galaxy S21', 171.0, 7.6, 15.2, 0.8, false, 3, null, null, null, 'https://www.samsung.com/global/galaxy/galaxy-s21-5g/');
-insert into products values (2,'Home','Kitchen Appliances','Instant Pot', 550.0, 30.5, 35.5, 31.8, false, 2, null, null, null, 'https://instantpot.com/products/instant-pot-duo-nova-7-in-1-pressure-cooker-6-quart/');
-insert into products values (3,'Clothing','Men','Levi Strauss & Co. 501 Original Fit Jeans', 800.0, 50.0, 75.0, 2.5, false, 5, null, null, null, 'https://www.levi.com/US/en_US/clothing/men/jeans/501-original-fit-jeans/p/005010020');
-insert into products values (4,'Food','Snacks','Lays Classic Potato Chips', 28.0, 19.0, 26.0, 5.5, false, 10, null, null, null, 'https://www.lays.com/products/lays-classic-potato-chips');
-insert into products values (5,'Sports','Fitness','Yoga Mat', 1200.0, 61.0, 183.0, 0.6, false, 2, null, null, null, 'https://www.amazon.com/AmazonBasics-Extra-Thick-Exercise-Carrying/dp/B0716C7GXQ/');
-insert into products values (6,'Beauty','Skin Care','CeraVe Moisturizing Cream', 539.0, 8.9, 8.9, 8.9, false, 3, null, null, null, 'https://www.cerave.com/skincare/moisturizers/moisturizing-cream');
-insert into products values (7,'Home','Furniture','Ikea Billy Bookcase', 3000.0, 80.0, 28.0, 106.0, false, 2, null, null, null, 'https://www.ikea.com/us/en/p/billy-bookcase-white-40263848/');
-insert into products values (8,'Toys','Lego','LEGO Star Wars Millennium Falcon', 4500.0, 33.0, 48.0, 14.0, true, 5, null, null, null, 'https://www.lego.com/en-us/product/millennium-falcon-75257');
-insert into products values (9,'Electronics','Headphones','Bose QuietComfort 35 II Wireless Headphones', 235.0, 17.0, 18.0, 8.1, true, 3, null, null, null, 'https://www.bose.com/en_us/products/headphones/over_ear_headphones/quietcomfort-35-wireless-ii.html');
-insert into products values (10,'Home','Bedding','Brooklinen Luxe Core Sheet Set', 2400.0, 90.0, 102.0, 1.0, false, 5, null, null, null, 'https://www.brooklinen.com/products/luxe-core-sheet-set');
+insert into products values (1,'Electronics','Smartphone','Samsung Galaxy S21','10', 171.0, 7.6, 15.2, 0.8, false, 3, null, null, null, 'https://www.samsung.com/global/galaxy/galaxy-s21-5g/');
+insert into products values (2,'Home','Kitchen Appliances','Instant Pot','10', 550.0, 30.5, 35.5, 31.8, false, 2, null, null, null, 'https://instantpot.com/products/instant-pot-duo-nova-7-in-1-pressure-cooker-6-quart/');
+insert into products values (3,'Clothing','Men','Levi Strauss & Co. 501 Original Fit Jeans','10', 800.0, 50.0, 75.0, 2.5, false, 5, null, null, null, 'https://www.levi.com/US/en_US/clothing/men/jeans/501-original-fit-jeans/p/005010020');
+insert into products values (4,'Food','Snacks','Lays Classic Potato Chips','10', 28.0, 19.0, 26.0, 5.5, false, 10, null, null, null, 'https://www.lays.com/products/lays-classic-potato-chips');
+insert into products values (5,'Sports','Fitness','Yoga Mat','10', 1200.0, 61.0, 183.0, 0.6, false, 2, null, null, null, 'https://www.amazon.com/AmazonBasics-Extra-Thick-Exercise-Carrying/dp/B0716C7GXQ/');
+insert into products values (6,'Beauty','Skin Care','CeraVe Moisturizing Cream','10', 539.0, 8.9, 8.9, 8.9, false, 3, null, null, null, 'https://www.cerave.com/skincare/moisturizers/moisturizing-cream');
+insert into products values (7,'Home','Furniture','Ikea Billy Bookcase','10', 3000.0, 80.0, 28.0, 106.0, false, 2, null, null, null, 'https://www.ikea.com/us/en/p/billy-bookcase-white-40263848/');
+insert into products values (8,'Toys','Lego','LEGO Star Wars Millennium Falcon','10', 4500.0, 33.0, 48.0, 14.0, true, 5, null, null, null, 'https://www.lego.com/en-us/product/millennium-falcon-75257');
+insert into products values (9,'Electronics','Headphones','Bose QuietComfort 35 II Wireless Headphones','10', 235.0, 17.0, 18.0, 8.1, true, 3, null, null, null, 'https://www.bose.com/en_us/products/headphones/over_ear_headphones/quietcomfort-35-wireless-ii.html');
+insert into products values (10,'Home','Bedding','Brooklinen Luxe Core Sheet Set','10', 2400.0, 90.0, 102.0, 1.0, false, 5, null, null, null, 'https://www.brooklinen.com/products/luxe-core-sheet-set');
 
 insert into product_prices values (1, '$799.99', '2022-01-01', '2022-02-01');
 insert into product_prices values (1, '$699.99', '2022-02-02', '2022-03-01');

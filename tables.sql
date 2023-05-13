@@ -10,6 +10,7 @@ create table products (
     prod_type varchar(50),
     prod_subtype varchar(50),
     prod_description varchar(255),
+    stock_quantity integer,
 	weight float, # grams
 	package_size_width float, #Centimeters
     package_size_length float,
