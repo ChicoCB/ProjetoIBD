@@ -7,6 +7,7 @@ DROP VIEW IF EXISTS sales_per_country;
 DROP VIEW IF EXISTS sales_products_and_clients;
 DROP VIEW IF EXISTS products_date_of_purchase;
 DROP VIEW IF EXISTS clients_number_of_purchases;
+DROP VIEW IF EXISTS previous_day_products_sales;
 
 #clients_per_city
 CREATE VIEW clients_per_city AS
@@ -123,3 +124,13 @@ CREATE VIEW clients_number_of_purchases AS
         sales USING (sale_id)
     GROUP BY client_id
     ORDER BY number_of_purchases DESC);
+    
+CREATE VIEW previous_day_products_sales AS
+	(SELECT 
+		purchase_date, COUNT(prod_id) AS quantity_of_products_sold
+	FROM
+		products_date_of_purchase
+	WHERE
+		DATE_SUB(CURDATE(), INTERVAL 1 DAY) = purchase_date
+	GROUP BY purchase_date
+	ORDER BY quantity_of_products_sold);
