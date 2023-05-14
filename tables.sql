@@ -1,11 +1,11 @@
 DROP TABLE IF EXISTS sales_products;
 DROP TABLE IF EXISTS product_prices;
 DROP TABLE IF EXISTS sales_clients;
-DROP TABLE IF EXISTS sales;
 DROP TABLE IF EXISTS clients_adresses;
 DROP TABLE IF EXISTS products;
 DROP TABLE IF EXISTS clients;
 DROP TABLE IF EXISTS sales_adresses;
+DROP TABLE IF EXISTS sales;
 DROP TABLE IF EXISTS adresses;
 
 #Todas as tabelas em normalização 3FN
@@ -96,8 +96,9 @@ create table sales_adresses (
 	sale_id integer,
     adress_id integer,
     
-    primary key (sale_id),
-    foreign key (adress_id) references adresses(adress_id)
+    primary key (sale_id,adress_id),
+    foreign key (adress_id) references adresses(adress_id),
+    foreign key (sale_id) references sales(sale_id)
 );
 
 create table sales_clients (
@@ -114,6 +115,8 @@ create table sales_products (
     prod_id integer,
     prod_quantity integer,
 	discount decimal(5,2) default 0, #5 digitos, 2 casas antes da virgula
+    
+    primary key(sale_id,prod_id),
     foreign key (sale_id) references sales(sale_id)  ON DELETE CASCADE,
 	foreign key (prod_id) references products(prod_id)  ON DELETE CASCADE
 );
