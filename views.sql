@@ -4,6 +4,9 @@ DROP VIEW IF EXISTS clients_per_country;
 DROP VIEW IF EXISTS sales_per_city;
 DROP VIEW IF EXISTS sales_per_state;
 DROP VIEW IF EXISTS sales_per_country;
+DROP VIEW IF EXISTS sales_products_and_clients;
+DROP VIEW IF EXISTS products_date_of_purchase;
+DROP VIEW IF EXISTS clients_number_of_purchases;
 
 #clients_per_city
 CREATE VIEW clients_per_city AS
@@ -88,3 +91,35 @@ CREATE VIEW sales_per_country AS
         adresses USING (adress_id)
     GROUP BY country
     ORDER BY number_of_sales DESC);
+    
+CREATE VIEW sales_products_and_clients AS
+(SELECT 
+	*
+FROM
+	sales
+		JOIN
+	sales_products USING (sale_id)
+		JOIN
+	sales_clients USING (sale_id)
+		JOIN
+	clients USING (client_id)
+ORDER BY sale_id);
+
+CREATE VIEW products_date_of_purchase AS
+    (SELECT 
+        prod_id, purchase_date
+    FROM
+        sales_products_and_clients
+    ORDER BY prod_id);
+        
+CREATE VIEW clients_number_of_purchases AS
+    (SELECT 
+        client_id, COUNT(sale_id) AS number_of_purchases
+    FROM
+        clients
+            JOIN
+        sales_clients USING (client_id)
+            JOIN
+        sales USING (sale_id)
+    GROUP BY client_id
+    ORDER BY number_of_purchases DESC);
