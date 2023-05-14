@@ -1,7 +1,9 @@
-DROP INDEX purchase_date_index on sales;
-DROP INDEX cpf_index on clients;
-DROP INDEX cnpj_index on clients;
-DROP INDEX full_name_index on clients;
+
+#Remove comment to reset indexes
+#DROP INDEX purchase_date_index on sales;
+#DROP INDEX cpf_index on clients;
+#DROP INDEX cnpj_index on clients;
+#DROP INDEX full_name_index on clients;
 
 
 create index purchase_date_index on sales (purchase_date); 
