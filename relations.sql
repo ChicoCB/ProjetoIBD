@@ -1,13 +1,18 @@
-insert into products values (1,'Electronics','Smartphone','Samsung Galaxy S21','10', 171.0, 7.6, 15.2, 0.8, false, 3, null, null, null, 'https://www.samsung.com/global/galaxy/galaxy-s21-5g/');
-insert into products values (2,'Home','Kitchen Appliances','Instant Pot','10', 550.0, 30.5, 35.5, 31.8, false, 2, null, null, null, 'https://instantpot.com/products/instant-pot-duo-nova-7-in-1-pressure-cooker-6-quart/');
-insert into products values (3,'Clothing','Men','Levi Strauss & Co. 501 Original Fit Jeans','10', 800.0, 50.0, 75.0, 2.5, false, 5, null, null, null, 'https://www.levi.com/US/en_US/clothing/men/jeans/501-original-fit-jeans/p/005010020');
-insert into products values (4,'Food','Snacks','Lays Classic Potato Chips','10', 28.0, 19.0, 26.0, 5.5, false, 10, null, null, null, 'https://www.lays.com/products/lays-classic-potato-chips');
-insert into products values (5,'Sports','Fitness','Yoga Mat','10', 1200.0, 61.0, 183.0, 0.6, false, 2, null, null, null, 'https://www.amazon.com/AmazonBasics-Extra-Thick-Exercise-Carrying/dp/B0716C7GXQ/');
-insert into products values (6,'Beauty','Skin Care','CeraVe Moisturizing Cream','10', 539.0, 8.9, 8.9, 8.9, false, 3, null, null, null, 'https://www.cerave.com/skincare/moisturizers/moisturizing-cream');
-insert into products values (7,'Home','Furniture','Ikea Billy Bookcase','10', 3000.0, 80.0, 28.0, 106.0, false, 2, null, null, null, 'https://www.ikea.com/us/en/p/billy-bookcase-white-40263848/');
-insert into products values (8,'Toys','Lego','LEGO Star Wars Millennium Falcon','10', 4500.0, 33.0, 48.0, 14.0, true, 5, null, null, null, 'https://www.lego.com/en-us/product/millennium-falcon-75257');
-insert into products values (9,'Electronics','Headphones','Bose QuietComfort 35 II Wireless Headphones','10', 235.0, 17.0, 18.0, 8.1, true, 3, null, null, null, 'https://www.bose.com/en_us/products/headphones/over_ear_headphones/quietcomfort-35-wireless-ii.html');
-insert into products values (10,'Home','Bedding','Brooklinen Luxe Core Sheet Set','10', 2400.0, 90.0, 102.0, 1.0, false, 5, null, null, null, 'https://www.brooklinen.com/products/luxe-core-sheet-set');
+INSERT INTO products (prod_id, prod_type, prod_subtype, prod_description, stock_quantity, weight, package_size_width, package_size_length, package_size_height, is_fragile, max_package_stack, external_link)
+VALUES
+    (1, 'Construction Material', 'Concrete', 'Bag of Portland Cement', 1000, 50, 30, 30, 60, false, 5, 'https://example.com/portland-cement'),
+    (2, 'Construction Material', 'Lumber', '2x4x8 Lumber', 500, 2000, 5, 10, 244, false, 10, 'https://example.com/2x4-lumber'),
+    (3, 'Construction Material', 'Drywall', 'Sheet of Drywall', 200, 5000, 122, 244, 1.2, true, 8, 'https://example.com/drywall-sheet'),
+    (4, 'Construction Material', 'Roofing', 'Bundle of Asphalt Shingles', 300, 2500, 30, 91.4, 15.2, false, 3, 'https://example.com/asphalt-shingles'),
+    (5, 'Construction Material', 'Insulation', 'Roll of Fiberglass Insulation', 150, 1000, 61, 121.9, 15.2, false, 4, 'https://example.com/fiberglass-insulation');
+
+INSERT INTO products (prod_id, prod_type, prod_subtype, prod_description, stock_quantity, weight, package_size_width, package_size_length, package_size_height, is_fragile, max_package_stack, external_link)
+VALUES
+    (6, 'Construction Material', 'Brick', 'Red Clay Brick', 800, 2500, 7.5, 22.5, 11.3, false, 10, 'https://example.com/red-brick'),
+    (7, 'Construction Material', 'Tile', 'Ceramic Floor Tile', 600, 1000, 30, 30, 1.2, true, 5, 'https://example.com/ceramic-tile'),
+    (8, 'Construction Material', 'Rebar', 'Steel Reinforcing Bar', 400, 5000, 1.2, 6, 1.2, false, 20, 'https://example.com/rebar'),
+    (9, 'Construction Material', 'Plywood', '4x8 Plywood Sheet', 350, 20000, 122, 244, 1.2, false, 6, 'https://example.com/plywood-sheet'),
+    (10, 'Construction Material', 'Plaster', 'Bag of Plaster of Paris', 900, 1000, 15, 30, 8.5, true, 8, 'https://example.com/plaster-of-paris');
 
 insert into clients values (1, 'John Doe', 'John', 'Doe', 32, '1990-01-15', '12345678901', null, 'john.doe@example.com', '+1 (555) 555-1234', 'Visa', '1234 5678 9012 3456', '12/23', '123');
 insert into clients values (2, 'Jane Smith', 'Jane', 'Smith', 25, '1998-06-02', '23456789012', null, 'jane.smith@example.com', '+1 (555) 555-5678', 'Mastercard', '2345 6789 0123 4567', '03/24', '456');
